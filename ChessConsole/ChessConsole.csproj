@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ChessCore\ChessCore\ChessCore.csproj" />
+    <ProjectReference Include="..\ChessCore\ChessCore.csproj" />
   </ItemGroup>
 
 </Project>
