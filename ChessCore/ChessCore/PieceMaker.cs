@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ChessCore
 {
-    static public class FigureFab
+    abstract public class FigureFab
     {
         public static Piece Make(string name, int x, int y)
         {
@@ -26,8 +26,11 @@ namespace ChessCore
                 case "Knight":
                     piece = new Knight(x, y);
                     break;
-                case "Bshop":
+                case "Bishop":
                     piece = new Bishop(x, y);
+                    break;
+                default:
+                    piece = new Pawn(x, y);
                     break;
             }
 
