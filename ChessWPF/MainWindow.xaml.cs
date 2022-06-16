@@ -21,32 +21,90 @@ namespace ChessWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Piece> pieces;
+        private Pieces pieces;
+        private Piece activePiece;
+        private Button activeButton;
         public MainWindow()
         {
             InitializeComponent();
-            pieces = new List<Piece>();
+            pieces = new Pieces();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var btn = (Button)sender;
-            var piece = new Piece(1, 1);
-            if (btn.Content == null)
+            if (activePiece == null && btn.Content == null)
             {
-                piece = CreatePiece(btn);
+                CreatePiece(btn);
+            }
+            else if (activePiece == null)
+            {
+                ActivatePiece(btn);
+            }
+            else if (btn == activeButton)
+            {
+                InActivatePiece();
             }
             else
             {
-                btn.Background = Brushes.Blue; 
+                MovePiece(btn);
             }
         }
 
-        private Piece CreatePiece(Button btn)
+        private void ActivatePiece(Button btn)
+        {
+            btn.Background = Brushes.Blue;
+            var x = Grid.GetColumn(btn);
+            var y = Grid.GetRow(btn);
+            activePiece = pieces.FindPiece(x, y);
+            activeButton = btn;
+        }
+
+        private void InActivatePiece()
+        {
+            if ((Grid.GetRow(activeButton) + Grid.GetColumn(activeButton)) % 2 == 0)
+            {
+                activeButton.Background = Brushes.White;
+            }
+            else
+            {
+                activeButton.Background = Brushes.Black;
+            }
+            activeButton = null;
+            activePiece = null;
+        }
+
+        private void MovePiece(Button btn)
+        {
+            try
+            {
+                var x = Grid.GetColumn(btn);
+                var y = Grid.GetRow(btn);
+                activePiece.Move(x, y);
+                btn.Content = activeButton.Content;
+
+                if (btn.Background == Brushes.Black)
+                {
+                    btn.Foreground = Brushes.White;
+                }
+                else
+                {
+                    btn.Foreground = Brushes.Black;
+                }
+                activeButton.Content = null;
+                InActivatePiece();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CreatePiece(Button btn)
         {
             var pieceCod = GetPieceCode();
-            var x = Grid.GetRow(btn);
-            var y = Grid.GetColumn(btn);
+            var x = Grid.GetColumn(btn);
+            var y = Grid.GetRow(btn);
             pieces.Add(FigureFab.Make(pieceCod, x, y));
 
             btn.Content = pieceCod;
@@ -55,7 +113,6 @@ namespace ChessWPF
                 btn.Foreground = Brushes.White;
             }
             btn.Content = pieceCod;
-            return pieces.Last();
         }
 
         private string GetPieceCode()
