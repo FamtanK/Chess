@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ChessWPF"
         mc:Ignorable="d"
         Title="Chess" Height="520" Width="800">
-    <Grid Margin="0,0,300,0">
+    <Grid Margin="0,0,300,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
@@ -28,78 +28,78 @@
             <ColumnDefinition Width="60"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Grid.Row="0" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
-        <Button Grid.Column="1" Grid.Row="0" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="0" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="0" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="0" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="0" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="0" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="0" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="0" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="0" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="0" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="0" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="0" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="0" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="0" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="1" Grid.Row="1" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="0" Grid.Row="1" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="1" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="1" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="1" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="1" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="1" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="1" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="0" Grid.Row="1" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="1" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="1" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="1" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="1" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="1" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="1" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="0" Grid.Row="2" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="2" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="2" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="2" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="2" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="2" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="2" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="2" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="0" Grid.Row="2" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="1" Grid.Row="2" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="2" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="2" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="2" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="2" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="2" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="2" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="1" Grid.Row="3" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="0" Grid.Row="3" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="3" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="3" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="3" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="3" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="3" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="3" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="3" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="3" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="3" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="3" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="3" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="3" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="0" Grid.Row="4" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="4" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="4" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="4" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="4" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="4" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="4" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="4" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="0" Grid.Row="4" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="1" Grid.Row="4" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="4" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="4" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="4" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="4" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="4" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="4" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="1" Grid.Row="5" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="0" Grid.Row="5" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="5" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="5" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="5" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="5" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="5" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="5" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="1" Grid.Row="5" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="0" Grid.Row="5" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="5" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="5" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="5" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="5" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="5" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="5" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="0" Grid.Row="6" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="6" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="6" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="6" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="6" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="6" Background="Black" Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="6" Background="White" Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="6" Background="Black" Click="Button_Click"/>
+        <Button Grid.Column="0" Grid.Row="6" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="1" Grid.Row="6" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="6" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="6" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="6" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="6" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="6" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="6" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
 
-        <Button Grid.Column="1" Grid.Row="7" Background="White"  Click="Button_Click"/>
-        <Button Grid.Column="0" Grid.Row="7" Background="Black"  Click="Button_Click"/>
-        <Button Grid.Column="3" Grid.Row="7" Background="White"  Click="Button_Click"/>
-        <Button Grid.Column="2" Grid.Row="7" Background="Black"  Click="Button_Click"/>
-        <Button Grid.Column="5" Grid.Row="7" Background="White"  Click="Button_Click"/>
-        <Button Grid.Column="4" Grid.Row="7" Background="Black"  Click="Button_Click"/>
-        <Button Grid.Column="7" Grid.Row="7" Background="White"  Click="Button_Click"/>
-        <Button Grid.Column="6" Grid.Row="7" Background="Black"  Click="Button_Click"/>
-        <ComboBox Name ="Pieces" Grid.Column="7" VerticalAlignment="Top" Width="120" Height="27" Margin="137,30,-197,0">
-            <ComboBoxItem IsSelected="True">    
+        <Button Grid.Column="1" Grid.Row="7" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="0" Grid.Row="7" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="3" Grid.Row="7" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="2" Grid.Row="7" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="5" Grid.Row="7" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="4" Grid.Row="7" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="7" Grid.Row="7" Background="White" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Grid.Column="6" Grid.Row="7" Background="Black" Click="Button_Click" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <ComboBox Name ="Pieces" Grid.Column="7" VerticalAlignment="Top" Width="120" Height="27" Margin="0,3,-219,0" HorizontalAlignment="Right" Grid.Row="1">
+            <ComboBoxItem IsSelected="True">
                 <TextBlock>King</TextBlock>
             </ComboBoxItem>
 

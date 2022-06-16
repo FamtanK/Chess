@@ -122,5 +122,38 @@ namespace ChessWPF
             string pieceCode = content.Text;
             return pieceCode;
         }
+
+        private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var btn = (Button)sender;
+            var x = Grid.GetColumn(btn);
+            var y = Grid.GetRow(btn);
+
+            if (btn == activeButton)
+            {
+                if ((Grid.GetRow(activeButton) + Grid.GetColumn(activeButton)) % 2 == 0)
+                {
+                    activeButton.Background = Brushes.White;
+                }
+                else
+                {
+                    activeButton.Background = Brushes.Black;
+                }
+                activeButton = null;
+                activePiece = null;
+            }
+
+            btn.Content = null;
+
+            int index = pieces.FindPieceIndex(x, y);
+            if (index == -1)
+            {
+                MessageBox.Show("There is nothing on these coordinates");
+            }
+            else
+            {
+                pieces.RemoveAt(pieces.FindPieceIndex(x, y));
+            }
+        }
     }
 }
