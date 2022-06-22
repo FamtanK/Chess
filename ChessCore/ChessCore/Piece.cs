@@ -1,18 +1,12 @@
-﻿/*
-Ismagilov Ilgam 220 group
-Task "Chess - 3"
-12.04.2022
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace ChessCore
 {
     public class Piece
     {
-        protected int x;
-        protected int y;
+        public int x;
+        public int y;
 
         public Piece(int x, int y)
         {
