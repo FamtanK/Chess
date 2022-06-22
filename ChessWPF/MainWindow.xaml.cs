@@ -28,6 +28,7 @@ namespace ChessWPF
         {
             InitializeComponent();
             pieces = new Pieces();
+            AddRules();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -80,6 +81,12 @@ namespace ChessWPF
             {
                 var x = Grid.GetColumn(btn);
                 var y = Grid.GetRow(btn);
+
+                if (pieces.FindPiece(x, y) != null)
+                {
+                    throw new Exception("Incorrect coords");
+                }
+
                 activePiece.Move(x, y);
                 btn.Content = activeButton.Content;
 
@@ -102,17 +109,16 @@ namespace ChessWPF
 
         private void CreatePiece(Button btn)
         {
-            var pieceCod = GetPieceCode();
+            var pieceCode = GetPieceCode();
             var x = Grid.GetColumn(btn);
             var y = Grid.GetRow(btn);
-            pieces.Add(FigureFab.Make(pieceCod, x, y));
+            pieces.Add(FigureFab.Make(pieceCode, x, y));
 
-            btn.Content = pieceCod;
+            btn.Content = pieceCode;
             if (btn.Background == Brushes.Black)
             {
                 btn.Foreground = Brushes.White;
             }
-            btn.Content = pieceCod;
         }
 
         private string GetPieceCode()
@@ -154,6 +160,15 @@ namespace ChessWPF
             {
                 pieces.RemoveAt(pieces.FindPieceIndex(x, y));
             }
+        }
+
+        private void AddRules()
+        {
+            tbRules.Text += $"Rules:" +
+                $"\n    To create a piece, select it in the Pieces and left-click on the desired field cell;" +
+                $"\n    To move the piece, click on it with the left mouse button;" +
+                $"\n    To cancel the movement, click on the selected piece again with the left mouse button;" +
+                $"\n    To remove the piece, click on the desired piece with the right mouse button.";
         }
     }
 }
